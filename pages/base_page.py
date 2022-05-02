@@ -16,3 +16,10 @@ class BasePage:
         except NoSuchElementException:
             return False
         return True
+
+    def is_text_present_in_url(self, text):
+        if text in self.browser.current_url:
+            return True
+        else:
+            return False
+
